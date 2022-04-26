@@ -22,7 +22,6 @@ resource "azurerm_storage_account" "dev" {
   }
 }
 
-
 resource "azurerm_storage_container" "container_tfstate" {
   name                  = "tfstate"
   storage_account_name  = azurerm_storage_account.dev.name
