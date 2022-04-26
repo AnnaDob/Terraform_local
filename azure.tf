@@ -20,6 +20,11 @@ resource "azurerm_storage_account" "dev" {
   tags = {
     environment = "staging"
   }
+
+  network_rules {
+    default_action             = "Deny"
+    ip_rules                   = ["195.160.234.124"]
+  }
 }
 
 resource "azurerm_storage_container" "container_tfstate" {
