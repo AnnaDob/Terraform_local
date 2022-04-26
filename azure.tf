@@ -22,7 +22,7 @@ resource "azurerm_storage_account" "dev" {
   }
 
   network_rules {
-    default_action             = "Deny"
+    default_action             = "Allow"
     ip_rules                   = ["195.160.234.124"]
   }
 }
