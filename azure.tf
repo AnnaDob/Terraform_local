@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "main" {
 
 // Configure the Storage Account
 resource "azurerm_storage_account" "dev" {
-  name                     = join("",[local.setup_name, "storage358"])
+  name                     = join("",[local.setup_name, "mainstorage"])
   resource_group_name      = azurerm_resource_group.main.name
 
   location                 = azurerm_resource_group.main.location
