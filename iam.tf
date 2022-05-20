@@ -13,7 +13,7 @@ resource "azuread_service_principal" "terraform_spn" {
 
 resource "azurerm_role_assignment" "terraform_spn_role" {
   scope                = azurerm_resource_group.main.id
-  role_definition_name = "Contributor"
+  role_definition_name = "Owner"
   principal_id         = azuread_service_principal.terraform_spn.object_id
 }
 
